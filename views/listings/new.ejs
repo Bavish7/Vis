@@ -1,7 +1,7 @@
 <% layout("/layouts/boilerplate") %>
 <div class="row mt-3">
   <div class="col-8 offset-2">
-    <h3 class="mb-3" style="color: #155d5d" id="create">Create a New Listing</h3>
+    <h3 class="mb-3" style="color: #155d5d; font-size: 2rem;" id="create">Create a New Listing</h3>
     <form
       method="POST"
       action="/listings"
@@ -9,7 +9,7 @@
       class="needs-validation"
       enctype="multipart/form-data"
     >
-      <div class="mb-3 newListing">
+      <div class="mb-3 "style="font-size: 1.3rem">
         <label for="title" class="form-label">Title</label>
         <input
           name="listing[title]"
@@ -21,7 +21,7 @@
         <div class="valid-feedback">Title looks good!</div>
       </div>
 
-      <div class="mb-3">
+      <div class="mb-3 "style="font-size: 1.3rem">
         <label for="description" class="form-label">Description</label>
         <textarea
           name="listing[description]"
@@ -32,12 +32,12 @@
         <div class="invalid-feedback">Enter a short description</div>
       </div>
 
-      <div class="mb-3">
+      <div class="mb-3 "style="font-size: 1.3rem">
         <label for="image" class="form-label">Upload New Image</label>
         <input name="listing[image]" type="file" class="form-control" />
       </div>
 
-      <div class="row">
+      <div class="row "style="font-size: 1.3rem">
         <div class="mb-3 col-md-4">
           <label for="price" class="form-label">Price</label>
           <input
@@ -49,7 +49,7 @@
           <div class="invalid-feedback">Please enter a valid price</div>
         </div>
 
-        <div class="mb-3 col-md-8">
+        <div class="mb-3 col-md-8 "style="font-size: 1.3rem">
           <label for="country" class="form-label">Country</label>
           <input
             name="listing[country]"
@@ -61,7 +61,7 @@
           <div class="invalid-feedback">Please enter the country name</div>
         </div>
       </div>
-      <div class="mb-3">
+      <div class="mb-3 "style="font-size: 1.3rem; ">
         <label for="location" class="form-label">Location</label>
         <input
           name="listing[location]"
@@ -72,7 +72,7 @@
         />
         <div class="invalid-feedback">Please enter valid location</div>
       </div>
-      <button class="btn btn-dark add-btn mt-3 mb-4" class="mb-3">Add</button>
+      <button class="btn btn-dark  mt-3 mb-4 mb-3" style="background-color: #155d5d;">Add</button>
     </form>
   </div>
 </div>

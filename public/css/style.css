@@ -816,10 +816,7 @@ footer {
     width: 160% !important;
     margin-right: auto;
     font-weight: 700;
-    /* font-size: 2.2rem !important; */
-  }
-  .newListing{
-    font-size: 1.5rem !important;
+    font-size: 2.2rem !important;
   }
 
   #custom {
