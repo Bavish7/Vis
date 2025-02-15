@@ -38,14 +38,22 @@
     <div class="row mb-3 align-items-center" style="gap: 20px;"> <!-- Added custom gap -->
       <!-- Start Date -->
       <div class="col-auto">
-        <label for="rentStartDate" class="form-label"><b>Check-In</b></label>
-        <input type="date" name="rentStartDate" class="form-control" required>
-      </div>
-      <!-- End Date -->
-      <div class="col-auto">
-        <label for="rentEndDate" class="form-label"><b>Check-Out</b></label>
-        <input type="date" name="rentEndDate" class="form-control" required>
-      </div>
+  <label for="rentStartDate" class="form-label"><b>Check-In</b></label>
+  <input type="date" name="rentStartDate" class="form-control" required min="" id="rentStartDate">
+</div>
+<!-- End Date -->
+<div class="col-auto">
+  <label for="rentEndDate" class="form-label"><b>Check-Out</b></label>
+  <input type="date" name="rentEndDate" class="form-control" required min="" id="rentEndDate">
+</div>
+
+<script>
+  // Set the current date as the minimum date for both inputs
+  const today = new Date().toISOString().split('T')[0]; // Get the current date in YYYY-MM-DD format
+  document.getElementById('rentStartDate').setAttribute('min', today);
+  document.getElementById('rentEndDate').setAttribute('min', today);
+</script>
+
     </div>
   </div>
   <!-- Hidden Inputs -->
@@ -67,11 +75,7 @@
   <br />
   <% if(currUser && listing.owner._id.equals(currUser._id)) { %>
   <div class="btns mb-5" style="margin-left: 10px">
-    <a
-      href="/listings/<%= listing._id %>/edit"
-      class="btn btn-dark col-1 offset-3 edit-btn"
-      >Edit</a
-    >
+    <a href="/listings/<%= listing._id %>/edit" class="btn btn-dark col-1 offset-3 edit-btn">Edit</a>
 
     <form method="POST" action="/listings/<%=listing._id%>?_method=DELETE">
       <button class="btn btn-dark offset-5">Delete</button>
