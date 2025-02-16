@@ -10,6 +10,12 @@ module.exports.index = async (req, res) => {
   res.render("listings/index.ejs", { allListings });
 };
 
+module.exports.sustain = async (req, res) => {
+  const allListings = await Listing.find({});
+  const sustainableListings = allListings.filter(listing => listing.sustainable);
+  res.render('listings/sustain.ejs', { sustainableListings });
+};
+
 module.exports.renderNewForm = (req, res) => {
   res.render("listings/new.ejs");
 };
@@ -44,13 +50,14 @@ module.exports.createListing = async (req, res, next) => {
 
   let url = req.file.path;
   let filename = req.file.filename;
-
-  const newListing = new Listing(req.body.listing);
+  let sustainablev = req.body.listing.sustainable === "true";
+  const newListing = new Listing(
+    req.body.listing
+  );
   newListing.owner = req.user._id;
   newListing.image = { url, filename };
-
   newListing.geometry = response.body.features[0].geometry;
-
+  newListing.sustainable = sustainablev;
   let savedListing = await newListing.save();
   console.log(savedListing);
 
@@ -79,8 +86,9 @@ module.exports.updateListing = async (req, res) => {
       limit: 2,
     })
     .send();
-
+    
   req.body.listing.geometry = coordinate.body.features[0].geometry;
+  req.body.listing.sustainable = req.body.listing.sustainable === 'true'; // Ensure boolean value
   let updatedListing = await Listing.findByIdAndUpdate(id, req.body.listing);
 
   if (req.file) {
