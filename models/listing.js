@@ -42,6 +42,11 @@ const listingSchema = new Schema({
     default: false,
     required: true,// Set default to false if not specified
   },
+  commercial: {
+    type: Boolean,
+    default: false,
+    required: true,// Set default to false if not specified
+  },
 });
 
 listingSchema.post("findOneAndDelete", async (listing) => {

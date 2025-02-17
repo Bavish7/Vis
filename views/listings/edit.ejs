@@ -89,10 +89,22 @@
           required>
           <option value="false" selected>Select an option</option>
           <option value="true">Yes, they generate enough energy</option>
-          <option value="false">No, they do not generate enough energy</option>
+          <option value="true">No, they do not generate enough energy</option>
           <option value="false">No solar panels are installed</option>
         </select>
         <div class="invalid-feedback">Please select whether the solar panels are sufficient or not.</div>
+      </div>
+      <div class="mb-3">
+        <label for="commercial" class="form-label">Is it a Commercial Listing?</label>
+        <select
+          name="listing[commercial]"
+          class="form-select"
+          required>
+          <option value="false" selected>Select an option</option>
+          <option value="true">Yes</option>
+          <option value="false">No</option>
+        </select>
+        <div class="invalid-feedback">Please select whether it is a commercial listing or not</div>
       </div>
       <button class="btn btn-dark edit-btn mt-3 mb-4">Edit</button>
     </form>

@@ -2,6 +2,7 @@
 <div class="row mt-3">
   <div class="col-8 offset-2">
     <h3 class="mb-3" style="color: #155d5d; font-size: 2rem;" id="create">Create a New Listing</h3>
+    <div class="col-12 offerContainer newContainer">
     <form
       method="POST"
       action="/listings"
@@ -31,8 +32,6 @@
         ></textarea>
         <div class="invalid-feedback">Enter a short description</div>
       </div>
-
-      
 
       <div class="mb-3 "style="font-size: 1.3rem">
         <label for="image" class="form-label">Upload New Image</label>
@@ -87,7 +86,19 @@
         </select>
         <div class="invalid-feedback">Please select whether the solar panels are sufficient or not.</div>
       </div>
+      <div class="mb-3" style="font-size: 1.3rem">
+        <label for="commercial" class="form-label">Is it a Commercial Listing?</label>
+        <select
+          name="listing[commercial]"
+          class="form-select"
+          required>
+          <option value="false" disabled selected>Select an option</option>
+          <option value="true">Yes</option>
+          <option value="false">No</option>
+        </select>
+        <div class="invalid-feedback">Please select whether the listing is commercial or not.</div>
       <button class="btn btn-dark  mt-3 mb-4 mb-3" style="background-color: #155d5d;">Add</button>
-    </form>
+      </form>
+    </div>
   </div>
 </div>

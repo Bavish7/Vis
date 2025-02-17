@@ -16,6 +16,12 @@ module.exports.sustain = async (req, res) => {
   res.render('listings/sustain.ejs', { sustainableListings });
 };
 
+module.exports.comm = async (req, res) => {
+  const allListings = await Listing.find({});
+  const commercialListings = allListings.filter(listing => listing.commercial);
+  res.render('listings/comm.ejs', { commercialListings });
+};
+
 module.exports.renderNewForm = (req, res) => {
   res.render("listings/new.ejs");
 };
@@ -51,6 +57,7 @@ module.exports.createListing = async (req, res, next) => {
   let url = req.file.path;
   let filename = req.file.filename;
   let sustainablev = req.body.listing.sustainable === "true";
+  let commercialev = req.body.listing.commercial === "true";
   const newListing = new Listing(
     req.body.listing
   );
@@ -58,6 +65,7 @@ module.exports.createListing = async (req, res, next) => {
   newListing.image = { url, filename };
   newListing.geometry = response.body.features[0].geometry;
   newListing.sustainable = sustainablev;
+  newListing.commercial = commercialev;
   let savedListing = await newListing.save();
   console.log(savedListing);
 
@@ -89,6 +97,7 @@ module.exports.updateListing = async (req, res) => {
     
   req.body.listing.geometry = coordinate.body.features[0].geometry;
   req.body.listing.sustainable = req.body.listing.sustainable === 'true'; // Ensure boolean value
+  req.body.listing.commercial = req.body.listing.commercial === 'true'; 
   let updatedListing = await Listing.findByIdAndUpdate(id, req.body.listing);
 
   if (req.file) {

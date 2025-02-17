@@ -290,7 +290,7 @@ img {
   width: 99%;
 }
 .offerContainer{
-  width: 50%;
+  width: 100%;
   background: linear-gradient(105.83deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2)) !important;
   backdrop-filter: blur(20px) !important;
   -webkit-backdrop-filter: blur(10px) !important;
@@ -301,7 +301,9 @@ img {
   padding-bottom: 20px;
   /* margin-bottom: 100px !important; */
 }
-
+/* .newContainer{
+  width: 100%;
+} */
 
 textarea {
   height: 180px;

@@ -24,7 +24,7 @@ router
 router.get("/new", isLoggedIn, listingController.renderNewForm);
 router.get("/search", listingController.search);
 router.get("/sustain", listingController.sustain);
-
+router.get("/comm", listingController.comm);
 router
   .route("/:id")
   .get(wrapAsync(listingController.showListing))
