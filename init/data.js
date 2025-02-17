@@ -15,6 +15,8 @@ const sampleListings = [
       type: "Point",
       coordinates: [-118.689423, 34.035591],
     },
+    sustainable: true,
+    commercial: false,
   },
   {
     title: "Modern Loft in Downtown",
@@ -31,6 +33,8 @@ const sampleListings = [
       type: "Point",
       coordinates: [-74.0059945, 40.7127492],
     },
+    sustainable: true,
+    commercial: false,
   },
   {
     title: "Mountain Retreat",
@@ -47,6 +51,8 @@ const sampleListings = [
       type: "Point",
       coordinates: [-106.823561, 39.191113],
     },
+    sustainable: false,
+    commercial: false,
   },
   {
     title: "Historic Villa in Tuscany",
@@ -63,6 +69,8 @@ const sampleListings = [
       type: "Point",
       coordinates: [11.255576, 43.769871],
     },
+    sustainable: false,
+    commercial: false,
   },
   {
     title: "Secluded Treehouse Getaway",
@@ -79,6 +87,8 @@ const sampleListings = [
       type: "Point",
       coordinates: [-122.674195, 45.520247],
     },
+    sustainable: true,
+    commercial: false,
   },
   {
     title: "Beachfront Paradise",
@@ -95,6 +105,8 @@ const sampleListings = [
       type: "Point",
       coordinates: [-86.851047, 21.161785],
     },
+    sustainable: false,
+    commercial: false,
   },
   {
     title: "Rustic Cabin by the Lake",
@@ -111,6 +123,8 @@ const sampleListings = [
       coordinates: [-120.12787, 39.267319],
       type: "Point",
     },
+    sustainable: false,
+    commercial: false,
   },
   {
     title: "Luxury Penthouse with City Views",
@@ -127,6 +141,8 @@ const sampleListings = [
       type: "Point",
       coordinates: [-118.242766, 34.053691],
     },
+    sustainable: false,
+    commercial: false,
   },
   {
     title: "Ski-In/Ski-Out Chalet",
@@ -143,6 +159,8 @@ const sampleListings = [
       type: "Point",
       coordinates: [7.228548, 46.096795],
     },
+    sustainable: false,
+    commercial: true,
   },
   {
     title: "Safari Lodge in the Serengeti",
@@ -159,6 +177,8 @@ const sampleListings = [
       coordinates: [34.8333, 2.3333],
       type: "Point",
     },
+    sustainable: false,
+    commercial: false,
   },
   {
     title: "Historic Canal House",
@@ -175,6 +195,8 @@ const sampleListings = [
       type: "Point",
       coordinates: [4.9, 52.378],
     },
+    sustainable: true,
+    commercial: false,
   },
   {
     title: "Private Island Retreat",
@@ -191,6 +213,8 @@ const sampleListings = [
       type: "Point",
       coordinates: [120.782751, 23.831445],
     },
+    sustainable: false,
+    commercial: false,
   },
   {
     title: "Charming Cottage in the Cotswolds",
@@ -207,6 +231,8 @@ const sampleListings = [
       type: "Point",
       coordinates: [-0.22985, 51.74913],
     },
+    sustainable: true,
+    commercial: false,
   },
   {
     title: "Historic Brownstone in Boston",
@@ -223,6 +249,8 @@ const sampleListings = [
       type: "Point",
       coordinates: [-71.058291, 42.360253],
     },
+    sustainable: false,
+    commercial: false,
   },
   {
     title: "Beachfront Bungalow in Bali",
@@ -239,6 +267,8 @@ const sampleListings = [
       type: "Point",
       coordinates: [115.2191175, -8.6524973],
     },
+    sustainable: true,
+    commercial: false,
   },
   {
     title: "Mountain View Cabin in Banff",
@@ -255,6 +285,8 @@ const sampleListings = [
       type: "Point",
       coordinates: [-115.56825, 51.177778],
     },
+    sustainable: false,
+    commercial: false,
   },
   {
     title: "Art Deco Apartment in Miami",
@@ -271,6 +303,8 @@ const sampleListings = [
       coordinates: [-80.18537321875, 25.76513515625],
       type: "Point",
     },
+    sustainable: false,
+    commercial: false,
   },
   {
     title: "Tropical Villa in Phuket",
@@ -287,6 +321,8 @@ const sampleListings = [
       type: "Point",
       coordinates: [98.386793, 7.888931],
     },
+    sustainable: false,
+    commercial: false,
   },
   {
     title: "Historic Castle in Scotland",
@@ -303,6 +339,8 @@ const sampleListings = [
       coordinates: [-4.228937, 57.477415],
       type: "Point",
     },
+    sustainable: false,
+    commercial: false,
   },
   {
     title: "Desert Oasis in Dubai",
@@ -319,6 +357,8 @@ const sampleListings = [
       type: "Point",
       coordinates: [55.292491, 25.265347],
     },
+    sustainable: false,
+    commercial: true,
   },
   {
     title: "Rustic Log Cabin in Montana",
@@ -335,6 +375,8 @@ const sampleListings = [
       type: "Point",
       coordinates: [-109.172599073804, 47.0725146587006],
     },
+    sustainable: true,
+    commercial: false,
   },
   {
     title: "Beachfront Villa in Greece",
@@ -351,6 +393,8 @@ const sampleListings = [
       type: "Point",
       coordinates: [25.334045, 37.440817],
     },
+    sustainable: false,
+    commercial: false,
   },
   {
     title: "Eco-Friendly Treehouse Retreat",
@@ -367,6 +411,8 @@ const sampleListings = [
       coordinates: [-84.092347, 9.932191],
       type: "Point",
     },
+    sustainable: true,
+    commercial: false,
   },
   {
     title: "Historic Cottage in Charleston",
@@ -383,11 +429,13 @@ const sampleListings = [
       type: "Point",
       coordinates: [-79.940273, 32.787601],
     },
+    sustainable: false,
+    commercial: false,
   },
   {
-    title: "Modern Apartment in Tokyo",
+    title: "Modern Showroom in Tokyo",
     description:
-      "Explore the vibrant city of Tokyo from this modern and centrally located apartment.",
+      "Explore the vibrant city of Tokyo from this modern and centrally located showroom.",
     image: {
       filename: "listingimage",
       url: "https://images.unsplash.com/photo-1480796927426-f609979314bd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHRva3lvfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
@@ -399,6 +447,8 @@ const sampleListings = [
       type: "Point",
       coordinates: [139.1485991, 35.76478424],
     },
+    sustainable: false,
+    commercial: true,
   },
   {
     title: "Lakefront Cabin in New Hampshire",
@@ -415,6 +465,8 @@ const sampleListings = [
       type: "Point",
       coordinates: [-71.5783054333969, 43.6898878153712],
     },
+    sustainable: false,
+    commercial: false,
   },
   {
     title: "Luxury Villa in the Maldives",
@@ -431,6 +483,8 @@ const sampleListings = [
       coordinates: [100.58672, 13.772545],
       type: "Point",
     },
+    sustainable: false,
+    commercial: false,
   },
   {
     title: "Ski Chalet in Aspen",
@@ -447,6 +501,8 @@ const sampleListings = [
       type: "Point",
       coordinates: [-106.823561, 39.191113],
     },
+    sustainable: false,
+    commercial: false,
   },
   {
     title: "Secluded Beach House in Costa Rica",
@@ -463,6 +519,8 @@ const sampleListings = [
       coordinates: [-84.092347, 9.932191],
       type: "Point",
     },
+    sustainable: false,
+    commercial: false,
   },
 ];
 
