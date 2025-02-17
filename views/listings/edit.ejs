@@ -1,17 +1,18 @@
 <% layout("/layouts/boilerplate") %>
 
 <div class="row mt-3">
-  <div class="col-8 offset-2">
-    <h3>Edit your Listing</h3>
+  <div class="col-8 offset-2" >
+    <h3 style="color: #155d5d; font-size: 2rem; text-align: center;" id="create">Edit your Listing</h3>
+    <div class="col-12 offerContainer" style="padding-right: 40px; padding-left: 40px;">
     <form
       method="POST"
       action="/listings/<%= listing._id %>?_method=PUT"
       novalidate
-      class="needs-validation"
+      class="needs-validation form1"
       enctype="multipart/form-data"
     >
       <div class="mb-3">
-        <label for="title" class="form-label">Title</label>
+        <label for="title" class="form-label" style="text-align: center;">Title</label>
         <input
           name="listing[title]"
           value="<%= listing.title %>"
@@ -108,6 +109,7 @@
       </div>
       <button class="btn btn-dark edit-btn mt-3 mb-4">Edit</button>
     </form>
+    </div>
   </div>
 </div>
 

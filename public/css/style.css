@@ -278,7 +278,9 @@ img {
   width: 70%;
   text-align: center;
 }
-
+.form1{
+  font-size: 1.2rem;
+}
 .row .allreview {
   margin-top: 40px;
   font-size: 22px;
@@ -290,7 +292,7 @@ img {
   width: 99%;
 }
 .offerContainer{
-  width: 100%;
+  /* width: 100% !important; */
   background: linear-gradient(105.83deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2)) !important;
   backdrop-filter: blur(20px) !important;
   -webkit-backdrop-filter: blur(10px) !important;
@@ -298,12 +300,9 @@ img {
   box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1) !important;
   border-radius: 20px !important;
   padding-top: 20px;
-  padding-bottom: 20px;
   /* margin-bottom: 100px !important; */
 }
-/* .newContainer{
-  width: 100%;
-} */
+
 
 textarea {
   height: 180px;
