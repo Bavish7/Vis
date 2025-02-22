@@ -611,6 +611,8 @@ nav {
 
 footer {
   background-color: #ebebee;
+  position: relative;
+  bottom: 0;
 }
 
 .footer {
@@ -621,6 +623,8 @@ footer {
   max-width: 100vw;
   margin: auto;
   padding: 40px 80px;
+  padding-bottom: 0px;
+  
 }
 
 .scrollup {
@@ -629,7 +633,6 @@ footer {
   align-items: center;
   cursor: pointer;
   padding-right: 50px;
-  margin-top: 20px;
 }
 
 .footer-item {
